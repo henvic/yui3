@@ -200,7 +200,7 @@ Y.mix(Y.IO.prototype, {
 				// When a response Content-Type of "text/plain" is used, Firefox and Safari
 				// will wrap the response string with <pre></pre>.
 				p = b.one('pre:first-child');
-				o.c.responseText = p ? p.get('text') : b.get('text');
+				o.c.responseText = p ? p.getHTML() : b.getHTML();
 				Y.log('The responseText value for transaction ' + o.id + ' is: ' + o.c.responseText + '.', 'info', 'io');
 			}
 			else {
